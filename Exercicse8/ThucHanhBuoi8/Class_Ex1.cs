@@ -45,30 +45,55 @@ namespace ThucHanhBuoi8
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            string maSV = txtMaSV.Text;
-
-            if (!string.IsNullOrEmpty(maSV) && KT_KhoaChinh(maSV))
+            // Kiểm tra mọi thông tin đã được nhập đầy đủ
+            if (string.IsNullOrEmpty(txtMaSV.Text) || string.IsNullOrEmpty(txtHoTen.Text) || string.IsNullOrEmpty(mkTxtNgaySinh.Text) || comboBoxLop.SelectedItem == null)
             {
-                using (SqlConnection conStr = new SqlConnection(connectionString))
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin.");
+                return;
+            }
+
+            // Kiểm tra mã sinh viên không được trùng
+            string maSV = txtMaSV.Text;
+            if (!KT_KhoaChinh(maSV))
+            {
+                MessageBox.Show("Mã sinh viên đã tồn tại. Vui lòng chọn mã sinh viên khác.");
+                return;
+            }
+
+            // Kiểm tra tuổi từ 17 trở lên
+            DateTime ngaySinh;
+            if (DateTime.TryParseExact(mkTxtNgaySinh.Text, "dd/MM/yyyy", null, System.Globalization.DateTimeStyles.None, out ngaySinh))
+            {
+                int age = DateTime.Now.Year - ngaySinh.Year;
+                if (age < 17)
                 {
-                    conStr.Open();
-
-                    string insertString = "INSERT INTO SinhVien VALUES (@MaSinhVien, @HoTen, @NgaySinh, @MaLop)";
-                    SqlCommand cmd = new SqlCommand(insertString, conStr);
-                    cmd.Parameters.AddWithValue("@MaSinhVien", txtMaSV.Text);
-                    cmd.Parameters.AddWithValue("@HoTen", txtHoTen.Text);
-                    cmd.Parameters.AddWithValue("@NgaySinh", DateTime.ParseExact(mkTxtNgaySinh.Text, "dd/MM/yyyy", null));
-                    cmd.Parameters.AddWithValue("@MaLop", comboBoxLop.SelectedItem.ToString());
-                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Tuổi của sinh viên phải từ 17 trở lên.");
+                    return;
                 }
-
-                MessageBox.Show("Thêm thành công");
             }
             else
             {
-                MessageBox.Show("Mã sinh viên đã tồn tại hoặc không hợp lệ.");
+                MessageBox.Show("Ngày sinh không hợp lệ. Vui lòng nhập theo định dạng dd/MM/yyyy.");
+                return;
             }
+
+            // Thêm sinh viên vào bảng SinhVien
+            using (SqlConnection conStr = new SqlConnection(connectionString))
+            {
+                conStr.Open();
+
+                string insertString = "INSERT INTO SinhVien VALUES (@MaSinhVien, @HoTen, @NgaySinh, @MaLop)";
+                SqlCommand cmd = new SqlCommand(insertString, conStr);
+                cmd.Parameters.AddWithValue("@MaSinhVien", txtMaSV.Text);
+                cmd.Parameters.AddWithValue("@HoTen", txtHoTen.Text);
+                cmd.Parameters.AddWithValue("@NgaySinh", DateTime.ParseExact(mkTxtNgaySinh.Text, "dd/MM/yyyy", null));
+                cmd.Parameters.AddWithValue("@MaLop", comboBoxLop.SelectedItem.ToString());
+                cmd.ExecuteNonQuery();
+            }
+
+            MessageBox.Show("Thêm thành công");
         }
+
 
         private void btnDelete_Click(object sender, EventArgs e)
         {

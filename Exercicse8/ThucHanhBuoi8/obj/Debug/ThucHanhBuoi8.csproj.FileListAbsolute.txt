@@ -12,3 +12,5 @@ D:\Visual Studio 2019 - Github\zohanubis\dot_net\Exercicse8\ThucHanhBuoi8\obj\De
 D:\Visual Studio 2019 - Github\zohanubis\dot_net\Exercicse8\ThucHanhBuoi8\obj\Debug\ThucHanhBuoi8.Sample_Ex1.resources
 D:\Visual Studio 2019 - Github\zohanubis\dot_net\Exercicse8\ThucHanhBuoi8\obj\Debug\ThucHanhBuoi8.Sample_Ex2.resources
 D:\Visual Studio 2019 - Github\zohanubis\dot_net\Exercicse8\ThucHanhBuoi8\obj\Debug\ThucHanhBuoi8.Class_Ex2.resources
+D:\Visual Studio 2019 - Github\zohanubis\dot_net\Exercicse8\ThucHanhBuoi8\obj\Debug\ThucHanhBuoi8.Advanced_Ex1.resources
+D:\Visual Studio 2019 - Github\zohanubis\dot_net\Exercicse8\ThucHanhBuoi8\obj\Debug\ThucHanhBuoi8.Advanced_Ex2.resources

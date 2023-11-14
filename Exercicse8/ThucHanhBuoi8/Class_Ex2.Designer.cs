@@ -43,7 +43,7 @@
             // 
             this.comboBoxSinhVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxSinhVien.FormattingEnabled = true;
-            this.comboBoxSinhVien.Location = new System.Drawing.Point(356, 186);
+            this.comboBoxSinhVien.Location = new System.Drawing.Point(356, 126);
             this.comboBoxSinhVien.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxSinhVien.Name = "comboBoxSinhVien";
             this.comboBoxSinhVien.Size = new System.Drawing.Size(239, 30);
@@ -53,7 +53,7 @@
             // 
             this.comboBoxMonHoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxMonHoc.FormattingEnabled = true;
-            this.comboBoxMonHoc.Location = new System.Drawing.Point(356, 130);
+            this.comboBoxMonHoc.Location = new System.Drawing.Point(356, 185);
             this.comboBoxMonHoc.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxMonHoc.Name = "comboBoxMonHoc";
             this.comboBoxMonHoc.Size = new System.Drawing.Size(239, 30);
@@ -122,7 +122,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(206, 190);
+            this.label2.Location = new System.Drawing.Point(206, 130);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(115, 26);
@@ -133,7 +133,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(207, 130);
+            this.label1.Location = new System.Drawing.Point(207, 185);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(106, 26);
@@ -156,6 +156,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Class_Ex2";
             this.Text = "Class_Ex2";
+            this.Load += new System.EventHandler(this.Class_Ex2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

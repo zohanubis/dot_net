@@ -63,5 +63,22 @@ namespace ThucHanhBuoi8
             OpenChildForm(new Class_Ex2());
             label1.Text = btnEx2.Text;
         }
+
+        private void btnAd_Ex1_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Advanced_Ex1());
+            label1.Text = btnAd_Ex1.Text;
+        }
+
+        private void btnAd_Ex2_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Advanced_Ex2());
+            label1.Text = btnAd_Ex2.Text;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
