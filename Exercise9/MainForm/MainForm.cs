@@ -51,5 +51,18 @@ namespace MainForm
             OpenChildForm(new Sample_Ex2());
             label1.Text = btnMau2.Text;
         }
+
+        private void btnEx1_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Class_Ex1());
+
+            label1.Text = btnEx1.Text;
+        }
+
+        private void btnEx2_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Class_Ex2());
+            label1.Text = btnEx2.Text;
+        }
     }
 }

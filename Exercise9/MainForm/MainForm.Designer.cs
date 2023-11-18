@@ -35,13 +35,13 @@
             this.btnEx1 = new System.Windows.Forms.Button();
             this.btnMau2 = new System.Windows.Forms.Button();
             this.btnMau1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel_Top = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel_Body = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel_Left.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel_Top.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_Left
@@ -101,6 +101,7 @@
             this.btnEx2.TabIndex = 3;
             this.btnEx2.Text = "Bài 2";
             this.btnEx2.UseVisualStyleBackColor = false;
+            this.btnEx2.Click += new System.EventHandler(this.btnEx2_Click);
             // 
             // btnEx1
             // 
@@ -115,6 +116,7 @@
             this.btnEx1.TabIndex = 2;
             this.btnEx1.Text = "Bài 1";
             this.btnEx1.UseVisualStyleBackColor = false;
+            this.btnEx1.Click += new System.EventHandler(this.btnEx1_Click);
             // 
             // btnMau2
             // 
@@ -127,7 +129,7 @@
             this.btnMau2.Name = "btnMau2";
             this.btnMau2.Size = new System.Drawing.Size(210, 56);
             this.btnMau2.TabIndex = 1;
-            this.btnMau2.Text = "Mẫu 2";
+            this.btnMau2.Text = "Mẫu 2  - 3";
             this.btnMau2.UseVisualStyleBackColor = false;
             this.btnMau2.Click += new System.EventHandler(this.btnMau2_Click);
             // 
@@ -145,18 +147,6 @@
             this.btnMau1.Text = "Mẫu 1";
             this.btnMau1.UseVisualStyleBackColor = false;
             this.btnMau1.Click += new System.EventHandler(this.btnMau1_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox1.Image = global::MainForm.Properties.Resources.truong_dai_hoc_cong_nghiep_thuc_pham_tp_hcm_hufi_chinh_thuc_doi_ten_thanh_truong_dai_hoc_cong_thuong_tp_hcm_huit_2;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(210, 195);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // panel_Top
             // 
@@ -189,6 +179,18 @@
             this.panel_Body.Size = new System.Drawing.Size(871, 514);
             this.panel_Body.TabIndex = 4;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox1.Image = global::MainForm.Properties.Resources.truong_dai_hoc_cong_nghiep_thuc_pham_tp_hcm_hufi_chinh_thuc_doi_ten_thanh_truong_dai_hoc_cong_thuong_tp_hcm_huit_2;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(210, 195);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -200,9 +202,9 @@
             this.Name = "MainForm";
             this.Text = "Thực Hành Buổi 9";
             this.panel_Left.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel_Top.ResumeLayout(false);
             this.panel_Top.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

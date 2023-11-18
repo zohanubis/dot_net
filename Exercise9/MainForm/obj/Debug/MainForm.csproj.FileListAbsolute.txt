@@ -9,3 +9,6 @@ D:\Visual Studio 2019 - Github\zohanubis\dot_net\Exercise9\MainForm\obj\Debug\Ma
 D:\Visual Studio 2019 - Github\zohanubis\dot_net\Exercise9\MainForm\obj\Debug\MainForm.exe
 D:\Visual Studio 2019 - Github\zohanubis\dot_net\Exercise9\MainForm\obj\Debug\MainForm.pdb
 D:\Visual Studio 2019 - Github\zohanubis\dot_net\Exercise9\MainForm\obj\Debug\MainForm.Sample_Ex1.resources
+D:\Visual Studio 2019 - Github\zohanubis\dot_net\Exercise9\MainForm\obj\Debug\MainForm.Sample_Ex2.resources
+D:\Visual Studio 2019 - Github\zohanubis\dot_net\Exercise9\MainForm\obj\Debug\MainForm.Class_Ex1.resources
+D:\Visual Studio 2019 - Github\zohanubis\dot_net\Exercise9\MainForm\obj\Debug\MainForm.Class_Ex2.resources
