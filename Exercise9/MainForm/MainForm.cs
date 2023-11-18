@@ -54,8 +54,7 @@ namespace MainForm
 
         private void btnEx1_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Class_Ex1());
-
+            OpenChildForm(new Class_Bai1());
             label1.Text = btnEx1.Text;
         }
 
