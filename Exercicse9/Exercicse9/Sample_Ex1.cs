@@ -1,45 +1,56 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
-namespace MainForm
+namespace Exercicse9
 {
     public partial class Sample_Ex1 : Form
     {
-        private string connectionString = "Data Source=ZOHANUBIS;Initial Catalog=QLSinhVien;Integrated Security=True";
-
-        // Tạo một DataSet để lưu trữ dữ liệu
-        private DataSet ds_QLSinhVien = new DataSet();
+        SqlConnection cn = new SqlConnection("Data Source=ZOHANUBIS;Initial Catalog=QLSinhVien;Integrated Security=True");
+        SqlDataAdapter da_Khoa;
+        DataSet ds_Khoa = new DataSet();
+        DataColumn[] key = new DataColumn[1];
 
         public Sample_Ex1()
         {
             InitializeComponent();
+            load_cboKhoa();
         }
 
-        public void Load_ComboBox()
+        void load_cboKhoa()
         {
-            string strSelect = "SELECT MaKhoa, TenKhoa FROM Khoa";
-            SqlDataAdapter daKhoa = new SqlDataAdapter(strSelect, connectionString);
-            daKhoa.Fill(ds_QLSinhVien, "Khoa");
-
-            comboBoxKhoa.DataSource = ds_QLSinhVien.Tables["Khoa"];
+            string strSelect = "Select * from Khoa";
+            da_Khoa = new SqlDataAdapter(strSelect, cn);
+            da_Khoa.Fill(ds_Khoa, "Khoa");
+            comboBoxKhoa.DataSource = ds_Khoa.Tables["Khoa"];
             comboBoxKhoa.DisplayMember = "TenKhoa";
             comboBoxKhoa.ValueMember = "MaKhoa";
         }
+
         public bool KT_KhoaChinh(string pMa)
         {
-            using (SqlConnection conStr = new SqlConnection(connectionString))
+            using (SqlConnection conStr = new SqlConnection(cn.ConnectionString))
             {
                 conStr.Open();
-                string slcString = "Select * from Lop where MaLop ='" + pMa + "'";
-                SqlCommand cmd = new SqlCommand(slcString, conStr);
-                SqlDataReader rd = cmd.ExecuteReader();
-                bool result = rd.HasRows;
-                rd.Close();
-                return !result;
+                string slcString = "SELECT * FROM Lop WHERE MaLop = @MaLop";
+                using (SqlCommand cmd = new SqlCommand(slcString, conStr))
+                {
+                    cmd.Parameters.AddWithValue("@MaLop", pMa);
+                    SqlDataReader rd = cmd.ExecuteReader();
+                    bool result = rd.HasRows;
+                    rd.Close();
+                    return !result;
+                }
             }
         }
+
         private void btnAdd_Click(object sender, EventArgs e)
         {
             // Lấy thông tin từ giao diện
@@ -55,7 +66,7 @@ namespace MainForm
 
             string insertQuery = "INSERT INTO Lop (MaLop, TenLop, MaKhoa) VALUES (@MaLop, @TenLop, @MaKhoa)";
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = new SqlConnection(cn.ConnectionString))
             {
                 connection.Open();
 
@@ -75,16 +86,22 @@ namespace MainForm
             ClearInputFields();
         }
 
-
         private void btnDelete_Click(object sender, EventArgs e)
         {
             // Lấy thông tin từ giao diện
             string maLop = txtMaLop.Text;
 
+            // Kiểm tra xem mã lớp có tồn tại không
+            if (KT_KhoaChinh(maLop))
+            {
+                MessageBox.Show("Mã lớp không tồn tại. Vui lòng chọn mã lớp khác.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             // Thực hiện xóa trong cơ sở dữ liệu
             string deleteQuery = "DELETE FROM Lop WHERE MaLop = @MaLop";
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = new SqlConnection(cn.ConnectionString))
             {
                 connection.Open();
 
@@ -107,7 +124,8 @@ namespace MainForm
             string tenLop = txtTenLop.Text;
             string maKhoa = comboBoxKhoa.SelectedValue.ToString();
 
-            if (!KT_KhoaChinh(maLop))
+            // Kiểm tra xem mã lớp có tồn tại không
+            if (KT_KhoaChinh(maLop))
             {
                 MessageBox.Show("Mã lớp không tồn tại. Vui lòng chọn mã lớp khác.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -115,7 +133,7 @@ namespace MainForm
 
             string updateQuery = "UPDATE Lop SET TenLop = @TenLop, MaKhoa = @MaKhoa WHERE MaLop = @MaLop";
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = new SqlConnection(cn.ConnectionString))
             {
                 connection.Open();
 
@@ -136,45 +154,19 @@ namespace MainForm
             ClearInputFields();
         }
 
+        private void Load_ComboBox()
+        {
+            // Cập nhật dữ liệu cho ComboBox sau khi thêm, sửa, xóa
+            ds_Khoa.Clear();
+            load_cboKhoa();
+        }
+
         private void ClearInputFields()
         {
-            txtMaLop.Text = string.Empty;
-            txtTenLop.Text = string.Empty;
-        }
-
-        private void Sample_Ex1_Load(object sender, EventArgs e)
-        {
-            Load_ComboBox();
-        }
-
-        private void comboBoxKhoa_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtTenLop_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtMaLop_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
+            // Xóa dữ liệu nhập trên giao diện
+            txtMaLop.Text = "";
+            txtTenLop.Text = "";
+            comboBoxKhoa.SelectedIndex = -1;
         }
     }
 }
