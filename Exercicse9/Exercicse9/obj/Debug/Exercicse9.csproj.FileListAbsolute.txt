@@ -10,3 +10,6 @@ D:\Visual Studio 2019 - Github\zohanubis\dot_net\Exercicse9\Exercicse9\obj\Debug
 D:\Visual Studio 2019 - Github\zohanubis\dot_net\Exercicse9\Exercicse9\obj\Debug\Exercicse9.MainForm.resources
 D:\Visual Studio 2019 - Github\zohanubis\dot_net\Exercicse9\Exercicse9\obj\Debug\Exercicse9.Sample_Ex1.resources
 D:\Visual Studio 2019 - Github\zohanubis\dot_net\Exercicse9\Exercicse9\obj\Debug\Exercicse9.Sample_Ex2.resources
+D:\Visual Studio 2019 - Github\zohanubis\dot_net\Exercicse9\Exercicse9\obj\Debug\Exercicse9.ClassForm1.resources
+D:\Visual Studio 2019 - Github\zohanubis\dot_net\Exercicse9\Exercicse9\obj\Debug\Exercicse9.ClassForm2.resources
+D:\Visual Studio 2019 - Github\zohanubis\dot_net\Exercicse9\Exercicse9\obj\Debug\Exercicse9.HomeWorkForm.resources

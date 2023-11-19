@@ -48,5 +48,23 @@ namespace Exercicse9
             OpenChildForm(new Sample_Ex2());
             label1.Text = btnMau2.Text;
         }
+
+        private void btnEx1_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ClassForm1());
+            label1.Text = btnEx1.Text;
+        }
+
+        private void btnEx2_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ClassForm2());
+            label1.Text = btnEx2.Text;
+        }
+
+        private void btnHW_Ex1_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new HomeWorkForm());
+            label1.Text = btnHW_Ex1.Text;
+        }
     }
 }

@@ -45,6 +45,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClassForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassForm1.Designer.cs">
+      <DependentUpon>ClassForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassForm2.Designer.cs">
+      <DependentUpon>ClassForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomeWorkForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomeWorkForm.Designer.cs">
+      <DependentUpon>HomeWorkForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +83,15 @@
     <Compile Include="Sample_Ex2.Designer.cs">
       <DependentUpon>Sample_Ex2.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ClassForm1.resx">
+      <DependentUpon>ClassForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassForm2.resx">
+      <DependentUpon>ClassForm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomeWorkForm.resx">
+      <DependentUpon>HomeWorkForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
