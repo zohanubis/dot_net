@@ -245,6 +245,28 @@ SELECT * FROM Diem WHERE MaSinhVien ='SV104'
     ('SV110', 'LT006', 9.0),
     ('SV110', 'LT007', 9.3);
 
+
+
+	--------------------------------------
+	SELECT
+    SV.MaSinhVien,
+    SV.HoTen,
+    L.TenLop,
+    DH.MaMonHoc,
+    MH.TenMonHoc,
+    DH.Diem
+FROM
+    SinhVien SV
+JOIN
+    Lop L ON SV.MaLop = L.MaLop
+JOIN
+    Diem DH ON SV.MaSinhVien = DH.MaSinhVien
+JOIN
+    MonHoc MH ON DH.MaMonHoc = MH.MaMonHoc;
+
+
+
+	------
 	SELECT * FROM Diem
 SELECT 
     Khoa.TenKhoa AS 'Khoa',
