@@ -79,7 +79,7 @@ namespace Exercicse9
                 ds_Diem.Tables["MHSV"].Clear();
                 string strSelect = "SELECT DISTINCT SV.MaSinhVien, SV.HoTen, L.TenLop, DH.MaMonHoc, MH.TenMonHoc, DH.Diem " +
                                    "FROM SinhVien SV " +
-                                   "INNER JOIN Lop L ON SV.MaLp = L.MaLop " +
+                                   "INNER JOIN Lop L ON SV.MaLop = L.MaLop " +
                                    "INNER JOIN Diem DH ON SV.MaSinhVien = DH.MaSinhVien " +
                                    "INNER JOIN MonHoc MH ON DH.MaMonHoc = MH.MaMonHoc " +
                                    "WHERE DH.MaMonHoc = '" + MaMH + "'";
