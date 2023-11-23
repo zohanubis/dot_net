@@ -127,5 +127,8 @@
   <ItemGroup>
     <None Include="Resources\truong-dai-hoc-cong-nghiep-thuc-pham-tp-hcm-hufi-chinh-thuc-doi-ten-thanh-truong-dai-hoc-cong-thuong-tp-hcm-huit-2.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\personal-computer.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

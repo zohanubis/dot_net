@@ -1,0 +1,12 @@
+D:\Visual Studio 2019 - Github\zohanubis\dot_net\KT_PhamHoDangHuy_2001215828\KT_PhamHoDangHuy_2001215828\bin\Debug\KT_PhamHoDangHuy_2001215828.exe.config
+D:\Visual Studio 2019 - Github\zohanubis\dot_net\KT_PhamHoDangHuy_2001215828\KT_PhamHoDangHuy_2001215828\bin\Debug\KT_PhamHoDangHuy_2001215828.exe
+D:\Visual Studio 2019 - Github\zohanubis\dot_net\KT_PhamHoDangHuy_2001215828\KT_PhamHoDangHuy_2001215828\bin\Debug\KT_PhamHoDangHuy_2001215828.pdb
+D:\Visual Studio 2019 - Github\zohanubis\dot_net\KT_PhamHoDangHuy_2001215828\KT_PhamHoDangHuy_2001215828\obj\Debug\KT_PhamHoDangHuy_2001215828.csproj.AssemblyReference.cache
+D:\Visual Studio 2019 - Github\zohanubis\dot_net\KT_PhamHoDangHuy_2001215828\KT_PhamHoDangHuy_2001215828\obj\Debug\KT_PhamHoDangHuy_2001215828.MainForm.resources
+D:\Visual Studio 2019 - Github\zohanubis\dot_net\KT_PhamHoDangHuy_2001215828\KT_PhamHoDangHuy_2001215828\obj\Debug\KT_PhamHoDangHuy_2001215828.Properties.Resources.resources
+D:\Visual Studio 2019 - Github\zohanubis\dot_net\KT_PhamHoDangHuy_2001215828\KT_PhamHoDangHuy_2001215828\obj\Debug\KT_PhamHoDangHuy_2001215828.csproj.GenerateResource.cache
+D:\Visual Studio 2019 - Github\zohanubis\dot_net\KT_PhamHoDangHuy_2001215828\KT_PhamHoDangHuy_2001215828\obj\Debug\KT_PhamHoDangHuy_2001215828.csproj.CoreCompileInputs.cache
+D:\Visual Studio 2019 - Github\zohanubis\dot_net\KT_PhamHoDangHuy_2001215828\KT_PhamHoDangHuy_2001215828\obj\Debug\KT_PhamHoDangHuy_2001215828.exe
+D:\Visual Studio 2019 - Github\zohanubis\dot_net\KT_PhamHoDangHuy_2001215828\KT_PhamHoDangHuy_2001215828\obj\Debug\KT_PhamHoDangHuy_2001215828.pdb
+D:\Visual Studio 2019 - Github\zohanubis\dot_net\KT_PhamHoDangHuy_2001215828\KT_PhamHoDangHuy_2001215828\obj\Debug\KT_PhamHoDangHuy_2001215828.ExerciseForm1.resources
+D:\Visual Studio 2019 - Github\zohanubis\dot_net\KT_PhamHoDangHuy_2001215828\KT_PhamHoDangHuy_2001215828\obj\Debug\KT_PhamHoDangHuy_2001215828.ExerciseForm2.resources

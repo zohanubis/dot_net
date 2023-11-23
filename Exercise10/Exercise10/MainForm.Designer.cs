@@ -33,15 +33,14 @@ namespace Exercise10
             this.btnHW_Ex1 = new System.Windows.Forms.Button();
             this.btnEx2 = new System.Windows.Forms.Button();
             this.btnEx1 = new System.Windows.Forms.Button();
-            this.btnMau2 = new System.Windows.Forms.Button();
             this.btnMau1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel_Top = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel_Body = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel_Left.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel_Top.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_Left
@@ -50,13 +49,12 @@ namespace Exercise10
             this.panel_Left.Controls.Add(this.btnHW_Ex1);
             this.panel_Left.Controls.Add(this.btnEx2);
             this.panel_Left.Controls.Add(this.btnEx1);
-            this.panel_Left.Controls.Add(this.btnMau2);
             this.panel_Left.Controls.Add(this.btnMau1);
             this.panel_Left.Controls.Add(this.pictureBox1);
             this.panel_Left.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel_Left.Location = new System.Drawing.Point(0, 0);
             this.panel_Left.Name = "panel_Left";
-            this.panel_Left.Size = new System.Drawing.Size(210, 714);
+            this.panel_Left.Size = new System.Drawing.Size(210, 723);
             this.panel_Left.TabIndex = 4;
             // 
             // btnHW_Ex1
@@ -66,7 +64,7 @@ namespace Exercise10
             this.btnHW_Ex1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHW_Ex1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHW_Ex1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnHW_Ex1.Location = new System.Drawing.Point(0, 419);
+            this.btnHW_Ex1.Location = new System.Drawing.Point(0, 363);
             this.btnHW_Ex1.Name = "btnHW_Ex1";
             this.btnHW_Ex1.Size = new System.Drawing.Size(210, 56);
             this.btnHW_Ex1.TabIndex = 4;
@@ -80,7 +78,7 @@ namespace Exercise10
             this.btnEx2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEx2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEx2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnEx2.Location = new System.Drawing.Point(0, 363);
+            this.btnEx2.Location = new System.Drawing.Point(0, 307);
             this.btnEx2.Name = "btnEx2";
             this.btnEx2.Size = new System.Drawing.Size(210, 56);
             this.btnEx2.TabIndex = 3;
@@ -94,26 +92,13 @@ namespace Exercise10
             this.btnEx1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEx1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEx1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnEx1.Location = new System.Drawing.Point(0, 307);
+            this.btnEx1.Location = new System.Drawing.Point(0, 251);
             this.btnEx1.Name = "btnEx1";
             this.btnEx1.Size = new System.Drawing.Size(210, 56);
             this.btnEx1.TabIndex = 2;
             this.btnEx1.Text = "Bài 1";
             this.btnEx1.UseVisualStyleBackColor = false;
-            // 
-            // btnMau2
-            // 
-            this.btnMau2.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnMau2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMau2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMau2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMau2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnMau2.Location = new System.Drawing.Point(0, 251);
-            this.btnMau2.Name = "btnMau2";
-            this.btnMau2.Size = new System.Drawing.Size(210, 56);
-            this.btnMau2.TabIndex = 1;
-            this.btnMau2.Text = "Mẫu 2  - 3";
-            this.btnMau2.UseVisualStyleBackColor = false;
+            this.btnEx1.Click += new System.EventHandler(this.btnEx1_Click);
             // 
             // btnMau1
             // 
@@ -128,17 +113,7 @@ namespace Exercise10
             this.btnMau1.TabIndex = 0;
             this.btnMau1.Text = "Mẫu 1";
             this.btnMau1.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox1.Image = global::Exercise10.Properties.Resources.truong_dai_hoc_cong_nghiep_thuc_pham_tp_hcm_hufi_chinh_thuc_doi_ten_thanh_truong_dai_hoc_cong_thuong_tp_hcm_huit_2;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(210, 195);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.btnMau1.Click += new System.EventHandler(this.btnMau1_Click);
             // 
             // panel_Top
             // 
@@ -147,7 +122,7 @@ namespace Exercise10
             this.panel_Top.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_Top.Location = new System.Drawing.Point(210, 0);
             this.panel_Top.Name = "panel_Top";
-            this.panel_Top.Size = new System.Drawing.Size(797, 153);
+            this.panel_Top.Size = new System.Drawing.Size(862, 153);
             this.panel_Top.TabIndex = 5;
             // 
             // label1
@@ -168,23 +143,35 @@ namespace Exercise10
             this.panel_Body.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_Body.Location = new System.Drawing.Point(210, 153);
             this.panel_Body.Name = "panel_Body";
-            this.panel_Body.Size = new System.Drawing.Size(797, 561);
+            this.panel_Body.Size = new System.Drawing.Size(862, 570);
             this.panel_Body.TabIndex = 6;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox1.Image = global::Exercise10.Properties.Resources.truong_dai_hoc_cong_nghiep_thuc_pham_tp_hcm_hufi_chinh_thuc_doi_ten_thanh_truong_dai_hoc_cong_thuong_tp_hcm_huit_2;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(210, 195);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1007, 714);
+            this.ClientSize = new System.Drawing.Size(1072, 723);
             this.Controls.Add(this.panel_Body);
             this.Controls.Add(this.panel_Top);
             this.Controls.Add(this.panel_Left);
             this.Name = "MainForm";
             this.Text = "Form1";
             this.panel_Left.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel_Top.ResumeLayout(false);
             this.panel_Top.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -195,7 +182,6 @@ namespace Exercise10
         private System.Windows.Forms.Button btnHW_Ex1;
         private System.Windows.Forms.Button btnEx2;
         private System.Windows.Forms.Button btnEx1;
-        private System.Windows.Forms.Button btnMau2;
         private System.Windows.Forms.Button btnMau1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel_Top;
