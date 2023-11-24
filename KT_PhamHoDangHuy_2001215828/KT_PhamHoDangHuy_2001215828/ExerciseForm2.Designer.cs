@@ -36,12 +36,14 @@ namespace KT_PhamHoDangHuy_2001215828
             this.cbo_Khoa = new System.Windows.Forms.ComboBox();
             this.txtMaLop = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtFind = new System.Windows.Forms.TextBox();
+            this.btnFind = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnShowPrint = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.btnShowPrint = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,6 +90,7 @@ namespace KT_PhamHoDangHuy_2001215828
             this.cbo_Khoa.Name = "cbo_Khoa";
             this.cbo_Khoa.Size = new System.Drawing.Size(223, 31);
             this.cbo_Khoa.TabIndex = 133;
+            this.cbo_Khoa.SelectedIndexChanged += new System.EventHandler(this.cbo_Khoa_SelectedIndexChanged);
             // 
             // txtMaLop
             // 
@@ -105,13 +108,67 @@ namespace KT_PhamHoDangHuy_2001215828
             this.label1.TabIndex = 130;
             this.label1.Text = "Mã Lớp";
             // 
+            // txtFind
+            // 
+            this.txtFind.Location = new System.Drawing.Point(697, 203);
+            this.txtFind.Name = "txtFind";
+            this.txtFind.Size = new System.Drawing.Size(178, 30);
+            this.txtFind.TabIndex = 146;
+            // 
+            // btnFind
+            // 
+            this.btnFind.AutoSize = true;
+            this.btnFind.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFind.Image = global::KT_PhamHoDangHuy_2001215828.Properties.Resources.icons8_find_50;
+            this.btnFind.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFind.Location = new System.Drawing.Point(882, 187);
+            this.btnFind.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
+            this.btnFind.Name = "btnFind";
+            this.btnFind.Size = new System.Drawing.Size(56, 56);
+            this.btnFind.TabIndex = 145;
+            this.btnFind.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnFind.UseVisualStyleBackColor = true;
+            this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.AutoSize = true;
+            this.btnSave.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Image = global::KT_PhamHoDangHuy_2001215828.Properties.Resources.icons8_save_48;
+            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSave.Location = new System.Drawing.Point(515, 55);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(110, 72);
+            this.btnSave.TabIndex = 144;
+            this.btnSave.Text = "Lưu";
+            this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnShowPrint
+            // 
+            this.btnShowPrint.AutoSize = true;
+            this.btnShowPrint.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShowPrint.Image = global::KT_PhamHoDangHuy_2001215828.Properties.Resources.icons8_print_48;
+            this.btnShowPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnShowPrint.Location = new System.Drawing.Point(683, 55);
+            this.btnShowPrint.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
+            this.btnShowPrint.Name = "btnShowPrint";
+            this.btnShowPrint.Size = new System.Drawing.Size(123, 72);
+            this.btnShowPrint.TabIndex = 143;
+            this.btnShowPrint.Text = "Xem In";
+            this.btnShowPrint.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnShowPrint.UseVisualStyleBackColor = true;
+            this.btnShowPrint.Click += new System.EventHandler(this.btnShowPrint_Click);
+            // 
             // btnExit
             // 
             this.btnExit.AutoSize = true;
             this.btnExit.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.Image = global::KT_PhamHoDangHuy_2001215828.Properties.Resources.icons8_exit_48;
             this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExit.Location = new System.Drawing.Point(840, 55);
+            this.btnExit.Location = new System.Drawing.Point(860, 55);
             this.btnExit.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(110, 72);
@@ -127,7 +184,7 @@ namespace KT_PhamHoDangHuy_2001215828
             this.btnEdit.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.Image = global::KT_PhamHoDangHuy_2001215828.Properties.Resources.icons8_edit_64;
             this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEdit.Location = new System.Drawing.Point(376, 55);
+            this.btnEdit.Location = new System.Drawing.Point(366, 55);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(110, 72);
@@ -143,7 +200,7 @@ namespace KT_PhamHoDangHuy_2001215828
             this.btnDelete.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.Image = global::KT_PhamHoDangHuy_2001215828.Properties.Resources.icons8_delete_48;
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(213, 55);
+            this.btnDelete.Location = new System.Drawing.Point(201, 55);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(110, 72);
@@ -160,7 +217,7 @@ namespace KT_PhamHoDangHuy_2001215828
             this.btnAdd.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.Image = global::KT_PhamHoDangHuy_2001215828.Properties.Resources.icons8_add_48;
             this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdd.Location = new System.Drawing.Point(49, 55);
+            this.btnAdd.Location = new System.Drawing.Point(28, 55);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(110, 72);
@@ -170,42 +227,13 @@ namespace KT_PhamHoDangHuy_2001215828
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // btnShowPrint
-            // 
-            this.btnShowPrint.AutoSize = true;
-            this.btnShowPrint.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShowPrint.Image = global::KT_PhamHoDangHuy_2001215828.Properties.Resources.icons8_print_48;
-            this.btnShowPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnShowPrint.Location = new System.Drawing.Point(680, 55);
-            this.btnShowPrint.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
-            this.btnShowPrint.Name = "btnShowPrint";
-            this.btnShowPrint.Size = new System.Drawing.Size(123, 72);
-            this.btnShowPrint.TabIndex = 143;
-            this.btnShowPrint.Text = "Xem In";
-            this.btnShowPrint.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnShowPrint.UseVisualStyleBackColor = true;
-            // 
-            // btnSave
-            // 
-            this.btnSave.AutoSize = true;
-            this.btnSave.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Image = global::KT_PhamHoDangHuy_2001215828.Properties.Resources.icons8_save_48;
-            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(528, 55);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(110, 72);
-            this.btnSave.TabIndex = 144;
-            this.btnSave.Text = "Lưu";
-            this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
             // ExerciseForm2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1012, 748);
+            this.Controls.Add(this.txtFind);
+            this.Controls.Add(this.btnFind);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnShowPrint);
             this.Controls.Add(this.label5);
@@ -246,5 +274,7 @@ namespace KT_PhamHoDangHuy_2001215828
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnShowPrint;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnFind;
+        private System.Windows.Forms.TextBox txtFind;
     }
 }

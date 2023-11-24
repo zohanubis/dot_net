@@ -27,9 +27,12 @@ namespace KT_PhamHoDangHuy_2001215828
             string strSelect = "Select * from Khoa";
             da_Khoa = new SqlDataAdapter(strSelect, cn);
             da_Khoa.Fill(ds_Khoa, "Khoa");
-           
+            DataRow newrow = ds_Khoa.Tables["Khoa"].NewRow();
+            newrow["MaKhoa"] = "Khoa000";
+            newrow["TenKhoa"] = "Tất cả khoa";
+            ds_Khoa.Tables["Khoa"].Rows.InsertAt(newrow, 0);
             cbo_Khoa.DataSource = ds_Khoa.Tables["Khoa"];
-            cbo_Khoa.DisplayMember = "MaKhoa";
+            cbo_Khoa.DisplayMember = "TenKhoa";
             cbo_Khoa.ValueMember = "MaKhoa";
         }
         void Load_Grid()
@@ -51,7 +54,21 @@ namespace KT_PhamHoDangHuy_2001215828
             txtTenLop.DataBindings.Add("Text", pDT, "TenLop");
             txtMaLop.DataBindings.Add("Text", pDT, "MaLop");
         }
+        void Load_GridType(string MaKhoa)
+        {
+            if(MaKhoa == "Khoa000") { Load_Grid(); }
+            else
+            {
+                ds_Khoa.Tables["LoaiLop"].Clear();
+                string strSelect = "Select * from Lop where MaKhoa = '" + MaKhoa + "'";
+                da_Khoa = new SqlDataAdapter(strSelect, cn);
+                da_Khoa.Fill(ds_Khoa, "LoaiLop");
+                key[0] = ds_Khoa.Tables["LoaiLop"].Columns[0];
+                ds_Khoa.Tables["LoaiLop"].PrimaryKey = key;
+                dataGridView.DataSource = ds_Khoa.Tables["LoaiLop"];
+            }
 
+        }
         private void btnAdd_Click(object sender, EventArgs e)
         {
             txtMaLop.Enabled = txtTenLop.Enabled = cbo_Khoa.Enabled = btnSave.Enabled = true;
@@ -71,17 +88,7 @@ namespace KT_PhamHoDangHuy_2001215828
         {
             if (MessageBox.Show("Bạn muốn xóa?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == System.Windows.Forms.DialogResult.Yes)
             {
-                // Kiểm tra khóa ngoại trong bảng Lớp
-                DataTable dt_Lop = new DataTable();
-                SqlDataAdapter da_Lop = new SqlDataAdapter("Select * from Lop where MaKhoa = '" + cbo_Khoa.SelectedValue.ToString() + "'", cn);
-
-                da_Lop.Fill(dt_Lop);
-                if (dt_Lop.Rows.Count > 0)
-                {
-                    MessageBox.Show("Dữ liệu đang sử dụng không thể xóa");
-                    return;
-                }
-                //Nếu cập nhật dữ liệu
+                
                DataRow upd_New = ds_Khoa.Tables["Lop"].Rows.Find(txtMaLop.Text);
                 if (upd_New != null)
                 {
@@ -92,6 +99,7 @@ namespace KT_PhamHoDangHuy_2001215828
                 MessageBox.Show("Thành công");
             }
         }
+
         private void btnEdit_Click(object sender, EventArgs e)
         {
             txtMaLop.Enabled = false;
@@ -176,6 +184,27 @@ namespace KT_PhamHoDangHuy_2001215828
         {
             btnEdit.Enabled = btnDelete.Enabled = true;
 
+        }
+
+        private void cbo_Khoa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void btnShowPrint_Click(object sender, EventArgs e)
+        {
+            DSLop a = new DSLop();
+            a.Show();
+        }
+
+        private void btnFind_Click(object sender, EventArgs e)
+        {
+            ds_Khoa.Tables["Lop"].Clear();
+            string strSelect ="Select * from Lop where MaKhoa like '%" + txtFind.Text + "%'";
+            da_Khoa = new SqlDataAdapter(strSelect, cn);
+            da_Khoa.Fill(ds_Khoa, "Lop");
+            key[0] = ds_Khoa.Tables["Lop"].Columns[0];
+            ds_Khoa.Tables["Lop"].PrimaryKey = key;
+            dataGridView.DataSource = ds_Khoa.Tables["Lop"];
         }
     }
 }
