@@ -37,7 +37,7 @@ namespace KT_PhamHoDangHuy_2001215828
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             if (currentFormChild != null) { currentFormChild.Close(); }
-            label_Val.Text = "Trang Chủ";
+            label_Val.Text = "Bài Kiểm Tra Lần 2 .NET";
             pictureBox_Val.Image = Properties.Resources.dashboard_icon;
         }
 

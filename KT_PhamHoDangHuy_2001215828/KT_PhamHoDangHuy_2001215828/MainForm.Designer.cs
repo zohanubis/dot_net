@@ -35,11 +35,11 @@ namespace KT_PhamHoDangHuy_2001215828
             this.btnEx1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel_Top = new System.Windows.Forms.Panel();
+            this.btnExit = new System.Windows.Forms.Button();
             this.pictureBox_Val = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label_Val = new System.Windows.Forms.Label();
             this.panel_Container = new System.Windows.Forms.Panel();
-            this.btnExit = new System.Windows.Forms.Button();
             this.panel_Left.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel_Top.SuspendLayout();
@@ -117,6 +117,22 @@ namespace KT_PhamHoDangHuy_2001215828
             this.panel_Top.Size = new System.Drawing.Size(1028, 153);
             this.panel_Top.TabIndex = 7;
             // 
+            // btnExit
+            // 
+            this.btnExit.AutoSize = true;
+            this.btnExit.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.Image = global::KT_PhamHoDangHuy_2001215828.Properties.Resources.icons8_exit_48;
+            this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExit.Location = new System.Drawing.Point(918, 0);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(110, 72);
+            this.btnExit.TabIndex = 130;
+            this.btnExit.Text = "Thoát";
+            this.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // pictureBox_Val
             // 
             this.pictureBox_Val.BackColor = System.Drawing.Color.Transparent;
@@ -163,22 +179,6 @@ namespace KT_PhamHoDangHuy_2001215828
             this.panel_Container.Name = "panel_Container";
             this.panel_Container.Size = new System.Drawing.Size(1028, 787);
             this.panel_Container.TabIndex = 8;
-            // 
-            // btnExit
-            // 
-            this.btnExit.AutoSize = true;
-            this.btnExit.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Image = global::KT_PhamHoDangHuy_2001215828.Properties.Resources.icons8_exit_48;
-            this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExit.Location = new System.Drawing.Point(918, 0);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(110, 72);
-            this.btnExit.TabIndex = 130;
-            this.btnExit.Text = "Thoát";
-            this.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // MainForm
             // 
